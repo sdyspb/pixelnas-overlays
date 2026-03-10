@@ -48,10 +48,11 @@ Follow the official Armbian [user customization guide](https://docs.armbian.com/
 
 3. **`10-header` (SSH banner)** – you have two options:
 
-   **Option A (automatic copy via overlay structure)**  
-   Place the file maintaining the target filesystem path inside `userpatches/overlay/`:
-   ```text
+**Option A (automatic copy via overlay structure)**  
+Place the file maintaining the target filesystem path inside `userpatches/overlay/`:
+```text
    userpatches/overlay/etc/update-motd.d/10-header
+```
  Armbian will automatically copy the whole tree into the final image, so no extra commands are needed.
 
 **Option B (explicit copy in `customize-image.sh`)**  
