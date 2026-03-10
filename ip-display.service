@@ -1,0 +1,15 @@
+[Unit]
+Description=IP Address Display Service (bottom half)
+After=network-online.target local-fs.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/ip_display -e /dev/input/event0
+Restart=always
+RestartSec=5
+User=root
+Group=video
+
+[Install]
+WantedBy=multi-user.target

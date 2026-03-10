@@ -1,0 +1,15 @@
+[Unit]
+Description=UPS Display Service (top half)
+After=network.target nut-client.service
+Wants=nut-client.service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/ups_display
+Restart=always
+RestartSec=5
+User=root
+Group=video
+
+[Install]
+WantedBy=multi-user.target
