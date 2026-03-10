@@ -57,7 +57,7 @@
 				wk2124-rst {
 					label = "wk2124-rst";		// 11 by chip
 					gpios = <&pca9555 9 1>;
-					default-state = "on";
+					default-state = "off";
 				};
 
 				diy-led {

@@ -7,6 +7,16 @@
 			pinctrl-names = "default";
 			pinctrl-0 = <&i2c5m0_xfer>;
 			status = "okay";
+
+			#address-cells = <1>;
+            		#size-cells = <0>;
+
+			rtc: rtc@51 {
+                		compatible = "nxp,pcf8563";
+                		reg = <0x51>;
+                		status = "okay";
+            		};
+
 		};
 	};
 	fragment@1 {

@@ -61,7 +61,7 @@
 			};
 		};
 	};
-
+/*
     	fragment@2 {
         	target-path = "/";
         	__overlay__ {
@@ -76,6 +76,21 @@
                     			gpios = <&gpio3 4 0>;			// PA4, Active High
 					default-state = "on";
 				};
+			};
+		};
+	};
+*/
+    	fragment@2 {
+        	target-path = "/";
+        	__overlay__ {
+            		gpio-lcd-power {
+				compatible = "regulator-fixed";
+				regulator-name = "EDP&LCD Power";
+				enable-active-high;
+				gpio = <&gpio3 4 0>;
+				pinctrl-names = "default";
+				pinctrl-0 = <&tp_pwr_en>;
+				regulator-always-on;
 			};
 		};
 	};
@@ -163,9 +178,9 @@
     	fragment@12 {
         	target-path = "/";
         	__overlay__ {
-			vcc5v0_usb20_host: regulator-vcc5v0_usb20_host {
+			vcc5v0_usb20_host: regulator-vcc5v0-usb20-host {
 				compatible = "regulator-fixed";
-				regulator-name = "vcc5v0_usb20_host";
+				regulator-name = "USB2.0 External Connectors Power";
 				enable-active-high;
 				gpio = <&gpio0 29 0>;
 				pinctrl-names = "default";

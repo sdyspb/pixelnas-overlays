@@ -2,50 +2,10 @@
 /plugin/;
 / {
 	fragment@0 {
-		target = <&uart1>;
-		__overlay__ {
-			pinctrl-names = "default";
-			pinctrl-0 = <&uart1m1_xfer &uart1m1_ctsn &uart1m1_rtsn>; // gmac0 conflict
-			status = "okay";
-		};
-	};
-	fragment@1 {
-		target = <&uart6>;
-		__overlay__ {
-			pinctrl-names = "default";
-			pinctrl-0 = <&uart6m1_xfer &uart6m1_ctsn &uart6m1_rtsn>; // gmac0 conflict
-			status = "okay";
-		};
-	};
-	fragment@2 {
-		target = <&uart9>;
-		__overlay__ {
-			pinctrl-names = "default";
-			pinctrl-0 = <&uart9m2_xfer>;
-			status = "okay";
-		};
-	};
-	fragment@3 {
-		target = <&uart0>;
-		__overlay__ {
-			pinctrl-names = "default";
-			pinctrl-0 = <&uart0m2_xfer>;
-			status = "okay";
-		};
-	};
-	fragment@4 {
 		target = <&uart3>;
 		__overlay__ {
 			pinctrl-names = "default";
-			pinctrl-0 = <&uart3m0_xfer &uart3_ctsn &uart3_rtsn>;
-			status = "okay";
-		};
-	};
-	fragment@5 {
-		target = <&uart4>;
-		__overlay__ {
-			pinctrl-names = "default";
-			pinctrl-0 = <&uart4m0_xfer &uart4_ctsn &uart4_rtsn>;
+			pinctrl-0 = <&uart3m1_xfer>;
 			status = "okay";
 		};
 	};
