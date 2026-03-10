@@ -94,5 +94,5 @@ To build an Armbian image for the Firefly AIO-3568J including these overlays, ru
 ```
 The customize-image.sh script will be called automatically during the finalization stage and will apply all customizations.
 
-License
+### License
 This project is licensed under GPL-2.0 (consistent with Armbian). The base device tree sources are derived from the mainline Linux kernel rk3568-roc-pc.dts.  
